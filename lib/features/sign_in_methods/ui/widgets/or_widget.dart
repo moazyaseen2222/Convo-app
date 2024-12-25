@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrWidget extends StatelessWidget {
   const OrWidget({
@@ -7,19 +8,19 @@ class OrWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         Expanded(
           child: Divider(
-            endIndent: 10,
-            indent: 10,
+            endIndent: 10.w,
+            indent: 10.w,
           ),
         ),
-        Text('or'),
+        const Text('or'),
         Expanded(
           child: Divider(
-            endIndent: 10,
-            indent: 10,
+            endIndent: 10.w,
+            indent: 10.w,
           ),
         ),
       ],

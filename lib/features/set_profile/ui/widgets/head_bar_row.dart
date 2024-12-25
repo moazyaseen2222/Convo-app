@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/spaces.dart';
 import '../../../../core/theming/app_colors.dart';
@@ -16,7 +17,7 @@ class HeadBarRow extends StatelessWidget {
         const BackButton(
           color: AppColors.mainBlue,
         ),
-        horiznetlSpace(110),
+        horiznetlSpace(110.w),
         Text(
           'Profile',
           style: AppTextStyles.font18BoldTextColor,

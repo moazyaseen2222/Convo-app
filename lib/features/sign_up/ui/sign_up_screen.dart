@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../app_widgets/app_button.dart';
 import '../../../app_widgets/convo_head_line.dart';
@@ -16,7 +17,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,29 +33,29 @@ class SignUpScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                verticalSpace(70),
+                verticalSpace(70.h),
 
                 // Convo head line \\
                 ConvoHeadLine(textStyle: AppTextStyles.font40BoldTextColor),
-                verticalSpace(30),
+                verticalSpace(30.h),
 
                 // Create new account \\
                 Center(
                     child: Text('Create new account',
                         style: AppTextStyles.font20BoldTextColor)),
-                verticalSpace(30),
+                verticalSpace(30.h),
 
                 // Sign up form \\
                 const SignUpForm(),
 
-                verticalSpace(100),
+                verticalSpace(100.h),
 
                 // Sign up button \\
                 AppButton(
                   title: 'Sign up',
                   onPressed: () {},
                 ),
-                verticalSpace(50),
+                verticalSpace(50.h),
 
                 // Have account? \\
                 const Center(child: HaveAccount()),

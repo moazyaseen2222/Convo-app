@@ -1,5 +1,6 @@
 import 'package:convo/core/theming/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../app_widgets/app_button.dart';
 import '../../../app_widgets/convo_head_line.dart';
 import '../../../core/spaces.dart';
@@ -13,42 +14,42 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Row(
-                  children: [
-          const BackButton(
-
-            color: AppColors.mainBlue,
-          ),
-           Text('Back',style:AppTextStyles.font15BlueBold ,)
-                  ],
-                ),
-              verticalSpace(70),
+                children: [
+                  const BackButton(
+                    color: AppColors.mainBlue,
+                  ),
+                  Text(
+                    'Back',
+                    style: AppTextStyles.font15BlueBold,
+                  )
+                ],
+              ),
+              verticalSpace(70.h),
 
               // Convo head line \\
               ConvoHeadLine(textStyle: AppTextStyles.font40BoldTextColor),
-              verticalSpace(30),
+              verticalSpace(30.h),
 
               // Sign in with google \\
               Center(
                   child: Text('Sign in with Google',
                       style: AppTextStyles.font20BoldTextColor)),
-              verticalSpace(30),
+              verticalSpace(30.h),
 
               // Sign in form \\
               const SignInForm(),
-              verticalSpace(20),
+              verticalSpace(20.h),
 
               // Forgot password? \\
               Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: EdgeInsets.only(left: 10.0.w),
                   child: Text('Forgot password?',
                       style: AppTextStyles.font13BlackBold)),
               verticalSpace(150),
@@ -58,7 +59,7 @@ class SignInScreen extends StatelessWidget {
                 title: 'Sign in',
                 onPressed: () {},
               ),
-              verticalSpace(50),
+              verticalSpace(50.h),
 
               // Dont Have account? \\
               const Center(child: DontHaveAccount()),

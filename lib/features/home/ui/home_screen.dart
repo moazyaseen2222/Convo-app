@@ -1,5 +1,6 @@
 import 'package:convo/core/helpers/spaces.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/build_tab_bar.dart';
 import 'widgets/head_row.dart';
@@ -13,9 +14,9 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
           child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 20,
+          padding: EdgeInsets.symmetric(
+            horizontal: 20.w,
+            vertical: 20.h,
           ),
           child: Column(
             children: [
