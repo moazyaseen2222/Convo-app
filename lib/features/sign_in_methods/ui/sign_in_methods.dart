@@ -1,3 +1,6 @@
+import 'package:convo/core/helpers/extensions.dart';
+import 'package:convo/core/routing/app_routers.dart';
+import 'package:convo/core/routing/routers.dart';
 import 'package:convo/core/spaces.dart';
 import 'package:convo/features/sign_in_methods/ui/widgets/dont_have_account.dart';
 import 'package:flutter/material.dart';
@@ -26,24 +29,32 @@ class SignInMethods extends StatelessWidget {
 
               // Sign in methods \\
 
-              const SignInMethodsCard(
-                  methodLogoName: 'images/google.png',
-                  methodTitle: 'Sign in with Google'),
-              const SignInMethodsCard(
-                  methodLogoName: 'images/facebook.png',
-                  methodTitle: 'Sign in with Facebook'),
-              const SignInMethodsCard(
-                  methodLogoName: 'images/apple.png',
-                  methodTitle: 'Sign in with Apple'),
-              verticalSpace(30.h),
+              SignInMethodsCard(
+                methodLogoName: 'images/google.png',
+                methodTitle: 'Sign in with Google',
+                onTap: () {
+                  context.pushNamed(Routes.loginScreen);
+                },
+              ),
+              SignInMethodsCard(
+                methodLogoName: 'images/facebook.png',
+                methodTitle: 'Sign in with Facebook',
+                onTap: () {},
+              ),
+              SignInMethodsCard(
+                methodLogoName: 'images/apple.png',
+                methodTitle: 'Sign in with Apple',
+                onTap: () {},
+              ),
+              verticalSpace(30),
 
               // Or Line \\
               const OrWidget(),
-              verticalSpace(30.h),
+              verticalSpace(30),
 
               // Phone Number \\
               const PhonNumberCard(),
-              verticalSpace(30.h),
+              verticalSpace(30),
 
               // Dont have Account? \\
               const DontHaveAccount(),

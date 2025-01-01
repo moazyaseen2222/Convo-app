@@ -51,7 +51,7 @@ class SignInScreen extends StatelessWidget {
               Padding(
                   padding: EdgeInsets.only(left: 10.0.w),
                   child: Text('Forgot password?',
-                      style: AppTextStyles.font13BlackBold)),
+                      style: AppTextStyles.font13BlackBoldUnderline)),
               verticalSpace(150),
 
               // Sign in button \\

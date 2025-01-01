@@ -1,4 +1,5 @@
-import 'package:convo/core/helpers/spaces.dart';
+import 'package:convo/app_widgets/convo_head_line.dart';
+import 'package:convo/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,10 +9,11 @@ class HeadRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         // Image & Status \\
         Stack(children: [
-           CircleAvatar(
+          CircleAvatar(
             radius: 25.r,
             backgroundImage: const AssetImage('images/person.png'),
           ),
@@ -28,7 +30,7 @@ class HeadRow extends StatelessWidget {
             ),
           ),
         ]),
-        horiznetlSpace(270.w),
+        ConvoHeadLine(textStyle: AppTextStyles.font18BoldTextColor),
 
         // Search Icon \\
         IconButton(

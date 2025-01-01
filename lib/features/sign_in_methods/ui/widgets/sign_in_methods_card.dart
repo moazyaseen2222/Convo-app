@@ -9,28 +9,35 @@ class SignInMethodsCard extends StatelessWidget {
     super.key,
     this.methodLogoName,
     required this.methodTitle,
+    required this.onTap,
   });
 
   final String? methodLogoName;
   final String methodTitle;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 15.0.h),
-      child: Card(
-        child: Padding(
-          padding: EdgeInsets.only(top: 15.0.h, bottom: 15.h),
-          child: Row(
-            children: [
-              horiznetlSpace(20.w),
-              Image(
-                height: 30.h,
-                image: AssetImage(methodLogoName!),
-              ),
-              horiznetlSpace(50.w),
-              Text(methodTitle, style: AppTextStyles.font15NormalTextColor),
-            ],
+    return GestureDetector(
+      onTap: () {
+        onTap;
+      },
+      child: Padding(
+        padding: EdgeInsets.only(bottom: 15.0.h),
+        child: Card(
+          child: Padding(
+            padding: EdgeInsets.only(top: 15.0.h, bottom: 15.h),
+            child: Row(
+              children: [
+                horiznetlSpace(20.w),
+                Image(
+                  height: 30.h,
+                  image: AssetImage(methodLogoName!),
+                ),
+                horiznetlSpace(50.w),
+                Text(methodTitle, style: AppTextStyles.font15NormalTextColor),
+              ],
+            ),
           ),
         ),
       ),

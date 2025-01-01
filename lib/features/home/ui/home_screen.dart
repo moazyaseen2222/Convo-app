@@ -1,9 +1,9 @@
 import 'package:convo/core/helpers/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'widgets/build_tab_bar.dart';
 import 'widgets/head_row.dart';
+import 'widgets/my_floating_action_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,28 +12,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20.w,
-            vertical: 20.h,
-          ),
-          child: Column(
-            children: [
-              // Head Row \\
-              const HeadRow(),
-              verticalSpace(20),
+          child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 15.w,
+          vertical: 10.h,
+        ),
+        child: Column(
+          children: [
+            // Head Row \\
+            const HeadRow(),
+            verticalSpace(20),
 
-              // Tab Bar \\
-              const BuildTabBar(),
+            // Tab Bar \\
+            const BuildTabBarAndViews(),
 
-              // Chats List  \\
-
-              // Floating Button \\
-            ],
-          ),
+            
+          ],
         ),
       )),
+      // Floating Button \\
+      floatingActionButton: const MyFloatingActionButton(),
     );
   }
 }
