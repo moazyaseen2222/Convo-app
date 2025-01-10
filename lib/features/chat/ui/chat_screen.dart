@@ -34,7 +34,7 @@ class ChatScreen extends StatelessWidget {
             
             
                 // Bottom Input Tools
-                 BottomInputTools(),
+                //  BottomInputTools(),
                 
             
               ],

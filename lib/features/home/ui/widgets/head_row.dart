@@ -1,7 +1,8 @@
-import 'package:convo/app_widgets/convo_head_line.dart';
 import 'package:convo/core/theming/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/app_widgets/convo_head_line.dart';
 
 class HeadRow extends StatelessWidget {
   const HeadRow({super.key});

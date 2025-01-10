@@ -1,8 +1,15 @@
+import 'package:convo/core/helpers/app_strings.dart';
 import 'package:convo/core/routing/app_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  await Supabase.initialize(
+    url: AppStrings.supabaseProjectUrl,
+    anonKey: AppStrings.supabaseAnnonKey,
+  );
+
   runApp(ScreenUtilInit(
       designSize: const Size(375, 812),
       builder: (context, child) => MyApp(

@@ -1,4 +1,4 @@
-import 'package:convo/core/spaces.dart';
+import '../../../../core/helpers/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,20 +1,18 @@
 class AppRegex {
   // Validate if the email is valid
   static bool isValidEmail(String email) {
-  return  RegExp(
-        r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
-    .hasMatch(email);
+    return RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
+        .hasMatch(email);
   }
-  
+
   //Validate if the password is valid using a single regex
   static bool isPasswordValid(String password) {
     return RegExp(
       r'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&*(),.?":{}|<>])[A-Za-z\d@#$%^&*(),.?":{}|<>]{8,}$',
-    ).
-    hasMatch(password);
+    ).hasMatch(password);
   }
 
- // Validate if the password is valid
+  // Validate if the password is valid
   // static bool isPasswordValid(String password) {
   //   return hasMinLength(password, 8) &&
   //          hasLowercase(password) &&
@@ -29,8 +27,7 @@ class AppRegex {
   // }
 
   static bool hasLowercase(String password) {
-  
-     return RegExp(r'^(?=.*[a-z])').hasMatch(password);
+    return RegExp(r'^(?=.*[a-z])').hasMatch(password);
   }
 
   // Check for at least one uppercase letter
@@ -48,11 +45,15 @@ class AppRegex {
     return RegExp(r'[@#$%^&*(),.?":{}|<>]').hasMatch(input);
   }
 
-
   // Check for minimum length using regex
   static bool hasMinLength(String input) {
-    return RegExp(r'^.{8,}$'). hasMatch(input);
+    return RegExp(r'^.{6,}$').hasMatch(input);
   }
+
+  static bool hasNameMinLength(String input) {
+    return RegExp(r'^.{4,}$').hasMatch(input);
+  }
+
 
   // Check for minimum length
   // static bool hasMinLength(String input, int minLength) {
